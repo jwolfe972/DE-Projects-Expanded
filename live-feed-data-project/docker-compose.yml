@@ -166,6 +166,18 @@ services:
       - kafka-ui
     networks:
       - my_network
+  producer-example-4:
+    build:
+      context: kafka-simulate-live-messages-example/producer
+      dockerfile: Dockerfile
+    container_name: producer-example-4
+    depends_on:
+      - kafka1
+      - kafka2
+      - kafka3
+      - kafka-ui
+    networks:
+      - my_network
 
 
 volumes:
