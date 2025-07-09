@@ -251,14 +251,6 @@ services:
     networks:
       - my_network
 
-
-
-
-
-
-
-
-
 volumes:
   pgdata:
   grafana_data:
