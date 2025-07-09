@@ -22,7 +22,7 @@ def print_batch(batch_df, epoch_id):
 spark = SparkSession.builder \
     .appName("Test_App") \
     .master("local[*]") \
-    .config("spark.jars.packages", "org.apache.spark:spark-sql-kafka-0-10_2.12:3.3.0") \
+    .config("spark.jars", "C:\\Spark\\spark-3.5.6-bin-hadoop3\\jars\\spark-sql-kafka-0-10_2.12-3.5.0") \
     .config("spark.hadoop.home.dir", "C:\\Hadoop") \
     .getOrCreate()
 

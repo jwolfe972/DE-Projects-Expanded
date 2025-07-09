@@ -96,10 +96,10 @@ services:
 
 
 
-  postgres:
+  postgres-main:
     image: postgres:17
     shm_size: 1gb
-    container_name: postgres
+    container_name: postgres-main
     environment:
       POSTGRES_USER: user
       POSTGRES_PASSWORD: password
@@ -166,6 +166,97 @@ services:
       - kafka-ui
     networks:
       - my_network
+  producer-example-4:
+    build:
+      context: kafka-simulate-live-messages-example/producer
+      dockerfile: Dockerfile
+    container_name: producer-example-4
+    depends_on:
+      - kafka1
+      - kafka2
+      - kafka3
+      - kafka-ui
+    networks:
+      - my_network
+  producer-example-5:
+    build:
+      context: kafka-simulate-live-messages-example/producer
+      dockerfile: Dockerfile
+    container_name: producer-example-5
+    depends_on:
+      - kafka1
+      - kafka2
+      - kafka3
+      - kafka-ui
+    networks:
+      - my_network
+  producer-example-6:
+    build:
+      context: kafka-simulate-live-messages-example/producer
+      dockerfile: Dockerfile
+    container_name: producer-example-6
+    depends_on:
+      - kafka1
+      - kafka2
+      - kafka3
+      - kafka-ui
+    networks:
+      - my_network
+  producer-example-7:
+    build:
+      context: kafka-simulate-live-messages-example/producer
+      dockerfile: Dockerfile
+    container_name: producer-example-7
+    depends_on:
+      - kafka1
+      - kafka2
+      - kafka3
+      - kafka-ui
+    networks:
+      - my_network
+  producer-example-8:
+    build:
+      context: kafka-simulate-live-messages-example/producer
+      dockerfile: Dockerfile
+    container_name: producer-example-8
+    depends_on:
+      - kafka1
+      - kafka2
+      - kafka3
+      - kafka-ui
+    networks:
+      - my_network
+  producer-example-9:
+    build:
+      context: kafka-simulate-live-messages-example/producer
+      dockerfile: Dockerfile
+    container_name: producer-example-9
+    depends_on:
+      - kafka1
+      - kafka2
+      - kafka3
+      - kafka-ui
+    networks:
+      - my_network
+  producer-example-10:
+    build:
+      context: kafka-simulate-live-messages-example/producer
+      dockerfile: Dockerfile
+    container_name: producer-example-10
+    depends_on:
+      - kafka1
+      - kafka2
+      - kafka3
+      - kafka-ui
+    networks:
+      - my_network
+
+
+
+
+
+
+
 
 
 volumes:

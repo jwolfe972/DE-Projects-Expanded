@@ -17,7 +17,7 @@ producer = KafkaProducer(
 while True:
     name = Faker().name()
     text = Faker().text()
-    topic = 'Faker-Example'
+    topic = 'Ppl-Text'
     message = f'{name}> {text}'
 
 
