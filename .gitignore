@@ -1,3 +1,4 @@
 /de-projects-venv/*
 .idea/*
 /live-feed-data-project/kafka-simulate-live-messages-example/consumer/ppl-text
+/live-feed-data-project/kafka-simulate-live-messages-example/consumer/ppl-text-v2

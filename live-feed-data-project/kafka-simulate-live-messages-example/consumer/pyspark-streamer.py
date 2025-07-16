@@ -25,7 +25,7 @@ url = "jdbc:postgresql://localhost:5432/de-projects-db"
 def write_to_postgres(batch_df, batch_id):
     try:
         print(f"\n=== Batch {batch_id} ===")
-        batch_df.show(truncate=False)
+      #  batch_df.show(truncate=False)
         batch_df.write \
             .format("jdbc") \
             .option("url", url) \
@@ -83,7 +83,7 @@ if __name__ == "__main__":
 
     df.writeStream \
         .foreachBatch(write_to_postgres) \
-        .option("checkpointLocation", f"C:\\Users\\hu78i\\Documents\\GitHub\\DE-Projects-Expanded\\live-feed-data-project\\kafka-simulate-live-messages-example\\consumer\\ppl-text")\
+        .option("checkpointLocation", f"C:\\Users\\hu78i\\Documents\\GitHub\\DE-Projects-Expanded\\live-feed-data-project\\kafka-simulate-live-messages-example\\consumer\\ppl-text-v2+")\
         .start() \
         .awaitTermination()
 
